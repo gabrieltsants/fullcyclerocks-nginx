@@ -24,6 +24,8 @@ services:
       - "3000:3000"
     depends_on:
       - mysql
+    command: >
+          dockerize -wait tcp://mysql:3306 -timeout 60s npm start
 
   mysql:
     image: mysql:8.0

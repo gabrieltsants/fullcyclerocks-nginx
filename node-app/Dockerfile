@@ -14,5 +14,3 @@ RUN npm install
 COPY . .
 
 EXPOSE 3000
-
-CMD ["dockerize", "-wait", "tcp://mysql:3306", "-timeout", "60s", "npm", "start"]
